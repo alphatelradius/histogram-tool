@@ -1,0 +1,86 @@
+<div class="mainbar">
+
+    <div class="container">
+
+        <button type="button" class="btn mainbar-toggle" data-toggle="collapse" data-target=".mainbar-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="mainbar-collapse collapse">
+
+            <ul class="nav navbar-nav mainbar-nav">
+
+                <li class="active">
+                    <a href="<?php echo URL::to(''); ?>">
+                        <i class="fa fa-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                        <i class="fa fa-bars"></i>
+                        Range
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">   
+                        <li><a href="<?php echo URL::to('/operate/range-type'); ?>"><i class="fa fa-user nav-icon"></i> Range Type</a></li>
+                        <li><a href="<?php echo URL::to('/operate/range-name'); ?>"><i class="fa fa-bars nav-icon"></i> Available Range</a></li>
+
+
+
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">
+                                <i class="fa fa-bar-chart-o"></i> 
+                                &nbsp;&nbsp;Charts & Graphs
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="ui-chart-flot.html">
+                                        <i class="fa fa-bar-chart-o"></i> 
+                                        &nbsp;&nbsp;jQuery Flot
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="ui-chart-morris.html">
+                                        <i class="fa fa-bar-chart-o"></i> 
+                                        &nbsp;&nbsp;Morris.js
+                                    </a>
+                                </li> 
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="<?php echo URL::to('/operate/data'); ?>">
+                        <i class="fa fa-files-o"></i>
+                        Files
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="<?php echo URL::to('/operate/process'); ?>" class="">
+                        <i class="fa fa-dashboard"></i>
+                        Process
+                    </a>
+                </li>  
+                <li class="">
+                    <a href="<?php echo URL::to('/operate/result'); ?>" class="">
+                        <i class="fa fa-archive"></i>
+                        Result
+                    </a>
+                </li>  
+
+
+            </ul>
+
+        </div> <!-- /.navbar-collapse -->   
+
+    </div> <!-- /.container --> 
+
+</div> <!-- /.mainbar -->

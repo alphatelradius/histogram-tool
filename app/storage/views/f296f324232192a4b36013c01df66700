@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>Form Validation - Target Admin</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/css/font-awesome.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/libs/css/ui-lightness/jquery-ui-1.9.2.custom.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/css/bootstrap.min.css'); ?>">
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/icheck/skins/minimal/blue.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/datepicker/datepicker.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/select2/select2.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/simplecolorpicker/jquery.simplecolorpicker.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/timepicker/bootstrap-timepicker.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/js/plugins/fileupload/bootstrap-fileupload.css'); ?>">
+
+        <!-- App CSS -->
+        <link rel="stylesheet" href="<?php echo URL::to('assets/css/target-admin.css'); ?>">
+        <link rel="stylesheet" href="<?php echo URL::to('assets/css/custom.css'); ?>">
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <!-- nav bar start -->
+        <?php echo $__env->make('user.nav-top', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <!-- nav bar end -->
+
+        <!-- main nav start -->
+        <?php echo $__env->make('user.nav-main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <!-- main nav end -->
+
+        <div class="container">
+
+            <div class="content">
+
+                <div class="content-container">
+
+
+
+                    <div class="content-header">
+                        <h2 class="content-headeindex-2.htmlr-title">Range Type</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="<?php echo URL::to(''); ?>">Home</a></li>
+                            <li><a href="<?php echo URL::to('/operate/range-type'); ?>">Available Range Type</a></li>
+                            <li class="active" >Add New Range Type</li>
+                        </ol>
+                    </div> <!-- /.content-header -->
+
+
+
+                    <div class="row">
+
+                        <div class="col-sm-8">
+
+                            <div class="portlet">
+
+                                <div class="portlet-header">
+
+                                    <h3>
+                                        <i class="fa fa-tasks"></i>
+                                        Add New Range Type Bellow
+                                    </h3>
+
+                                </div> <!-- /.portlet-header -->
+
+                                <div class="portlet-content">
+                                    <?php if(Session::has('message')): ?>	  
+                                    <?php echo Session::get('message'); ?>
+                                    <?php endif; ?>
+                                    <form id="validate-basic" action="<?php echo URL::to('/operate/range-type/save'); ?>" data-validate="parsley" class="form parsley-form" method="POST">
+
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" name="type_name" class="form-control" data-required="true" value="<?php echo Input::old('type_name'); ?>">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textarea-input">Description</label>
+                                            <textarea data-required="true" data-minlength="5" name="description" id="textarea-input" cols="10" rows="2" class="form-control"><?php echo Input::old('description'); ?></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success">Save</button>
+                                        </div>
+
+                                    </form>
+
+                                </div> <!-- /.portlet-content -->
+
+                            </div> <!-- /.portlet -->
+
+                        </div> <!-- /.col -->
+
+                    </div> <!-- /.row -->
+
+
+
+
+                </div> <!-- /.content-container -->
+
+            </div> <!-- /.content -->
+
+        </div> <!-- /.container -->
+
+
+        <footer class="footer">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-3">
+
+                        <h4>About Theme</h4>
+
+                        <br>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  
+
+                        <hr>    
+
+                        <p>&copy; 2014 Jumpstart Themes.</p>
+
+                    </div> <!-- /.col -->
+
+                    <div class="col-sm-3"> 
+
+                        <h4>Support</h4>
+
+                        <br>
+
+                        <ul class="icons-list">
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Frequently Asked Questions</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Ask a Question</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Video Tutorial</a>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Feedback</a>
+                            </li>
+                        </ul>          
+
+                    </div> <!-- /.col -->
+
+                    <div class="col-sm-3">
+
+                        <h4>Legal</h4>
+
+                        <br>
+
+                        <ul class="icons-list">
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">License</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Terms of Use</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Security</a>
+                            </li>
+                        </ul>          
+
+                    </div> <!-- /.col -->
+
+                    <div class="col-sm-3">
+
+                        <h4>Settings</h4>
+
+                        <br>
+
+                        <ul class="icons-list">
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Consectetur adipisicing</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Eiusmod tempor </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Fugiat nulla pariatur</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-angle-double-right icon-li"></i>
+                                <a href="javascript:;">Officia deserunt</a>
+                            </li>
+                        </ul>        
+
+                    </div> <!-- /.col -->
+
+                </div> <!-- /.row -->
+
+            </div> <!-- /.container -->
+
+        </footer>
+
+        <script src="<?php echo URL::to('assets/js/libs/jquery-1.10.1.min.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/libs/jquery-ui-1.9.2.custom.min.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/libs/bootstrap.min.js'); ?>"></script>
+
+        <!--[if lt IE 9]>
+        <script src="<?php echo URL::to('assets/js/libs/excanvas.compiled.js'); ?>"></script>
+        <![endif]-->
+
+        <!-- Plugin JS -->
+        <script src="<?php echo URL::to('assets/js/plugins/parsley/parsley.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/plugins/icheck/jquery.icheck.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/plugins/datepicker/bootstrap-datepicker.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/plugins/timepicker/bootstrap-timepicker.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/plugins/simplecolorpicker/jquery.simplecolorpicker.js'); ?>"></script>
+        <script src="<?php echo URL::to('assets/js/plugins/select2/select2.js'); ?>"></script>
+
+        <!-- App JS -->
+        <script src="<?php echo URL::to('assets/js/target-admin.js'); ?>"></script>
+
+        <!-- Plugin JS -->
+        <script src="<?php echo URL::to('assets/js/demos/form-validation.js'); ?>"></script>
+
+
+
+
+
+    </body>
+</html>

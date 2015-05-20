@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Name=dropzone
+Comment=Open '/var/www/html/histogram/public/dropzone'
+Icon=inode-directory
+Name[en_US]=dropzone
+Comment[en_US]=Open '/var/www/html/histogram/public/dropzone'
+Icon[en_US]=inode-directory
+URL=file:///var/www/html/histogram/public/dropzone
+Type=Link
